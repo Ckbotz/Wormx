@@ -13,9 +13,9 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # Load environment variables
-API_ID = os.getenv('28714959')
-API_HASH = os.getenv('c0b9797634090ee3f4c1c56db6c051a7')
-BOT_TOKEN = os.getenv('5289869101:AAHNeUR-S6yun12CzJnUWcqVHbMiLpc2QL8')
+API_ID = os.getenv('API_ID)
+API_HASH = os.getenv('API_HASH')
+BOT_TOKEN = os.getenv('BOT_TOKEN)
 
 # Check if required environment variables are set
 if not BOT_TOKEN:
