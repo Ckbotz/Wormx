@@ -1,5 +1,6 @@
 import telegram
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, MessageHandler
+from telegram.ext import filters  # Updated import for Filters
 import requests
 import json
 import urllib.parse
@@ -92,7 +93,7 @@ def main():
 
     # Add handlers
     dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
+    dp.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))  # Updated filters usage
     dp.add_error_handler(error)
 
     # Start the bot
